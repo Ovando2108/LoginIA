@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robot</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/bootstrap.css') }}">
+    <!-- <link rel="stylesheet" href="../src/css/style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+
+    <h1>Hola</h1>
+    <div class="container-xl">
+        <h1 class="text-center my-5">Que usuario desea iniciar sesion?</h1>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="{{ url_for('bienvenida', nombre='Osvaldo')}}" class="text-decoration-none">
+                    <div class="card bg-secondary rounded border shadow usuario">
+                        <img src="{{ url_for('static', filename='img/usuario.png')}}" alt="">
+
+                        <div class="card-footer">
+                            <input type="hidden" name="nombre" value="Osvaldo">
+                            <h2 class="fw-bold text-center">Osvaldo</h2>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-md-4">
+                <a href="{{ url_for('bienvenida', nombre='Jesus')}}" class="text-decoration-none">
+                    <div class="card bg-secondary rounded border shadow usuario">
+                        <img src="{{ url_for('static', filename='img/usuario.png')}}" alt="">
+
+                        <div class="card-footer">
+                            <h2 class="fw-bold text-center">Jesus</h2>
+                        </div>
+                    </div>
+                </a> 
+            </div>
+            <div class="col-md-4">
+                <a href="{{ url_for('bienvenida', nombre='Julian')}}" class="text-decoration-none">
+                    <div class="card bg-secondary rounded border shadow usuario">
+                        <img src="{{ url_for('static', filename='img/usuario.png')}}" alt="">
+
+                        <div class="card-footer">
+                            <h2 class="fw-bold text-center">Julian</h2>
+                        </div>
+                    </div>
+                </a> 
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
